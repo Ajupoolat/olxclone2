@@ -10,31 +10,14 @@ const {products,fetchProducts,setproducts}=useContext(ProductContext)
     fetchProducts()
   },[products])
 
-  const [count,setcount]=useState(0)
 const textref=useRef()
 
-const handleclick=()=>{
 
-  textref.current.style.color='red'
-  
-}
 
   return (
     <> 
     <Navbar setisauth={setisauth}  />
-
-
-    <button onClick={handleclick} ref={textref}>click</button>
-
-    <h1 className="font-medium">counter:{count}</h1>
-    <button onClick={()=>{setcount(count+1)}}>count++</button>
-    <button onClick={()=>{if(count<=0){
-    
-    }else{
-      setcount(count-1)
-    }}}>count--</button>
-    
-      <div className="w-full min-h-screen bg-gray-50">     
+  <div className="w-full min-h-screen bg-gray-50">     
         <nav className="w-full bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center space-x-6 overflow-x-auto py-3 no-scrollbar">
